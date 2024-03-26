@@ -1,7 +1,13 @@
 asgiref
+crispy-bootstrap5
+crispy-tailwind
 dj-database-url
 Django
+django-appconf
+django-bootstrap5
+django-compressor
 django-crispy-forms
+django-email
 django-environ
 EasyProcess
 entrypoint2
@@ -11,6 +17,7 @@ numpy
 opencv-contrib-python
 Pillow
 psycopg2
+psycopg2-binary
 PyAutoGUI
 PyGetWindow
 PyMsgBox
@@ -18,6 +25,9 @@ pyperclip
 PyRect
 pyscreenshot
 PyScreeze
+pytweening
+rcssmin
+rjsmin
 sqlparse
 typing_extensions
 tzdata

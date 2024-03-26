@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'Library_Management_System.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
+       
         default='postgres://lastassagn_user:z9Az8VvIHuRn4solZcHwx3lFpbu0HPZp@dpg-co15v0i0si5c73fkth60-a.oregon-postgres.render.com/lastassagn',
         conn_max_age = 600
     )
