@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 import environ
 env = environ.Env()
 environ.Env.read_env()
@@ -32,8 +33,6 @@ ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = ['https://library-management-system-lpaq.onrender.com', 'https://*.127.0.0.1']
 
 
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -85,16 +84,14 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Library_Management_System.wsgi.application'
 
 
-# Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR /'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        # Replace this value with your local database's connection string.
+        default='postgres://lastassagn_user:z9Az8VvIHuRn4solZcHwx3lFpbu0HPZp@dpg-co15v0i0si5c73fkth60-a.oregon-postgres.render.com/lastassagn',
+    )
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
